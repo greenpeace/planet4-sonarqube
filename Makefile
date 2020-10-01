@@ -3,8 +3,8 @@
 RELEASE := sonarqube
 NAMESPACE := sonarqube
 
-CHART_NAME := stable/sonarqube
-CHART_VERSION ?= 2.3.0
+CHART_NAME := oteemocharts/sonarqube
+CHART_VERSION ?= 6.8.0
 
 DEV_CLUSTER ?= p4-development
 DEV_PROJECT ?= planet-4-151612
@@ -19,6 +19,7 @@ lint:
 
 init:
 	helm init --client-only
+	helm repo add oteemo https://oteemo.github.io/charts/
 	helm repo update
 
 deploy: lint init
