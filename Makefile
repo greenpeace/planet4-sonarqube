@@ -3,7 +3,7 @@
 RELEASE := sonarqube
 NAMESPACE := sonarqube
 
-CHART_NAME := oteemocharts/sonarqube
+CHART_NAME := oteemo/sonarqube
 CHART_VERSION ?= 6.8.0
 
 DEV_CLUSTER ?= p4-development
