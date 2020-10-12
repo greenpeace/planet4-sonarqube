@@ -5,4 +5,3 @@ ingress:
     - name: sonarqube.p4.greenpeace.org
 persistence:
   enabled: true
-  
