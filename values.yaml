@@ -3,3 +3,5 @@ ingress:
   enabled: true
   hosts:
     - name: sonarqube.p4.greenpeace.org
+persistence:
+  enabled: true
