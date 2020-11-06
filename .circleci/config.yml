@@ -1,7 +1,13 @@
 ---
+docker_auth: &docker_auth
+  username: $DOCKERHUB_USERNAME
+  password: $DOCKERHUB_PASSWORD
+
 defaults: &defaults
   docker:
     - image: greenpeaceinternational/circleci-base:latest
+      auth:
+        <<: *docker_auth
 
 version: 2
 
@@ -49,7 +55,8 @@ workflows:
   version: 2
   commit:
     jobs:
-      - lint
+      - lint:
+          context: org-global
       - deploy:
           context: org-global
           requires:
